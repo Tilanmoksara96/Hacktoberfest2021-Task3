@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 //Global Variable
-int size,choice,ele;
+int i,rear,size,choice,ele;
 
 
 //Creating Stack
@@ -22,7 +22,7 @@ void push(int element)
     {
         st.top--;
         printf("\nEnter a Value ");
-        scanf("%s",&ele);
+        scanf("%d",&ele);
         st.arr[st.top]=ele;
     }
 }
@@ -47,7 +47,7 @@ int pop()
 int peek()
 {
     int display;
-    display=st.arr[st.rear];
+    display=st.arr[rear];
     return display;
 }
 
@@ -78,7 +78,7 @@ int main()
 
     do{
         printf("\nEnter Your Choice  ");
-        scanf("%c",&choice);
+        scanf("%d",&choice);
         switch(choice)
         {
         case 1:
